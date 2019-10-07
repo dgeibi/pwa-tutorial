@@ -1,0 +1,20 @@
+{
+  "name": "web-push-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "create-env": "node create-env.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^8.0.1",
+    "dotenv": "^8.1.0",
+    "koa": "^2.8.2",
+    "koa-body": "^4.1.1",
+    "koa-static": "^5.0.0",
+    "web-push": "^3.3.5"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "service-worker-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "api": "node api.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@koa/router": "^8.0.1",
+    "koa": "^2.8.2",
+    "koa-body": "^4.1.1",
+    "koa-static": "^5.0.0"
+  }
+}

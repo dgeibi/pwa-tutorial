@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>推送通知</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei,
+          Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei,
+          sans-serif;
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      input,
+      textarea,
+      button {
+        font: inherit;
+      }
+
+      form {
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      form > div {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="push-form">
+      <h2>通知控制台</h2>
+      <div>通知推迟: <input name="delay" type="number" value="0" /> 秒</div>
+      <div>通知存活时间: <input name="ttl" type="number" value="60" /> 秒</div>
+      <div>通知标题: <input name="title" value="主播开播了，快来看呀" /></div>
+      <div>通知内容: <textarea name="body">你好呀！</textarea></div>
+      <div>跳转URL: <input name="action" value="https://www.huya.com" /></div>
+      <button>发送通知</button>
+    </form>
+    <script src="/index.js"></script>
+  </body>
+</html>
