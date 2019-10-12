@@ -3,7 +3,7 @@
 
 importScripts('https://unpkg.com/idb@4.0.4/build/iife/index-min.js');
 
-const version = 2;
+const version = 3;
 const CACHENAME = 'static-v' + version;
 const expectedCaches = [CACHENAME];
 
@@ -59,7 +59,8 @@ async function cacheFirst(request) {
   return (
     response ||
     fetch(request).then(response => {
-      if (response.status === 200) cache.put(request, response.clone());
+      if (response.status === 200 || response.status === 0)
+        cache.put(request, response.clone());
       return response;
     })
   );
