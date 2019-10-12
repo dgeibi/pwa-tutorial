@@ -9,18 +9,17 @@ const expectedCaches = [CACHENAME];
 
 addEventListener('install', event => {
   event.waitUntil(
-    caches
-      .open(CACHENAME)
-      .then(cache =>
-        cache.addAll([
-          '/',
-          '/index.js',
-          '/style.css',
-          'https://unpkg.com/preact@10.0.0/dist/preact.umd.js',
-          'https://unpkg.com/htm@2.2.1/dist/htm.umd.js',
-          'https://unpkg.com/idb@4.0.4/build/iife/index-min.js'
-        ])
-      )
+    caches.open(CACHENAME).then(cache =>
+      cache.addAll([
+        '/',
+        '/index.js',
+        '/style.css',
+        // 下列URL需要支持跨域头，see https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses
+        'https://unpkg.com/preact@10.0.0/dist/preact.umd.js',
+        'https://unpkg.com/htm@2.2.1/dist/htm.umd.js',
+        'https://unpkg.com/idb@4.0.4/build/iife/index-min.js'
+      ])
+    )
   );
 });
 
