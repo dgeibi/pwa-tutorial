@@ -1,8 +1,6 @@
 /* eslint-env serviceworker */
 
-// open 127.0.0.1
-// 等待 1s，chrome devtool slow
-// open chrome://inspect/#service-workers and terminate service worker
+// 消耗1s
 const start = Date.now();
 while (Date.now() - start < 1000);
 
